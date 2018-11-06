@@ -2,20 +2,7 @@
 
 Code based on https://github.com/dternyak/React-Redux-Flask
 
-[VS Code](https://code.visualstudio.com) is a type of tool that combines the simplicity of
-a code editor with what developers need for their core edit-build-debug cycle. It provides comprehensive editing and debugging support, an extensibility model, and lightweight integration with existing tools.
-
-VS Code is updated monthly with new features and bug fixes. You can download it for Windows, macOS, and Linux on [VS Code's website](https://code.visualstudio.com/Download). To get the latest releases every day, you can install the [Insiders version of VS Code](https://code.visualstudio.com/insiders). This builds from the master branch and is updated daily at the very least.
-
-<p align="center">
-  <img alt="VS Code in action" src="https://cloud.githubusercontent.com/assets/11839736/16642200/6624dde0-43bd-11e6-8595-c81885ba0dc2.png">
-</p>
-
-The [`vscode`](https://github.com/microsoft/vscode) repository is where VS Code is developed and there are many ways you can participate in the project, for example:
-
-* [Submit bugs and feature requests](https://github.com/microsoft/vscode/issues) and help us verify as they are checked in.
-* Review [source code changes](https://github.com/microsoft/vscode/pulls).
-* Review the [documentation](https://github.com/microsoft/vscode-docs) and make pull requests for anything from typos to new content.
+This is starter code.
 
 ## Contributing
 
@@ -38,16 +25,9 @@ Please also see our [Code of Conduct](CODE_OF_CONDUCT.md).
 * File a bug in [GitHub Issues](https://github.com/Microsoft/vscode/issues).
 * [Tweet](https://twitter.com/code) us with any other feedback.
 
-## Related Projects
-
-Many of the core components and extensions to Code live in their own repositories on GitHub. For example, the [node debug adapter](https://github.com/microsoft/vscode-node-debug) and the [mono debug adapter](https://github.com/microsoft/vscode-mono-debug) have their own repositories.
-
-For a complete list, please visit the [Related Projects](https://github.com/Microsoft/vscode/wiki/Related-Projects) page on our [wiki](https://github.com/Microsoft/vscode/wiki).
-
 ## Bundled Extensions
 
-Code ships with a set of extensions. These extensions are located in the [extensions](extensions) folder.
-These extensions include grammars and snippets for several languages. Extensions that provide rich language support (code completion, go to definition) for a language have the suffix 'language-features'. For example, the 'json' extension provides coloring for JSON and the 'json-language-features' provides rich language support for JSON.
+The code ships with a set of recommended Visual Studio Code extensions that will empower the developement process of your Flask + React web application. These extensions include rich language support (code completion, go to definition) for both Python and JavaScript, as well as quick deploy to Azure from within VS Code. When the project is imported into VS Code, a notifcation will appear giving you the option to install these extensions. 
 
 ## License
 
