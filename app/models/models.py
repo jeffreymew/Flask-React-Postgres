@@ -75,8 +75,13 @@ class Task(db.Model):
             user_id=incoming["user_id"],
             status=incoming["status"]
         )
-        db.session.add(task)
-        db.session.commit()
+
+        try:
+            db.session.add(task)
+            db.session.commit()
+            return True
+        except IntegrityError:
+            return False
     
     @staticmethod
     def get_latest_tasks():

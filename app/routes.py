@@ -67,9 +67,8 @@ def is_token_valid():
 def submit_task():
     incoming = request.get_json()
 
-    try:
-        Task.add_task(incoming)
-    except IntegrityError:
+    success = Task.add_task(incoming)
+    if not success:
         return jsonify(message="Error submitting task"), 409
 
     return jsonify(success=True)

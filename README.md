@@ -4,6 +4,12 @@ Code based on https://github.com/dternyak/React-Redux-Flask
 
 This is starter code.
 
+## Running The Code
+
+1. Clone the reponsitory
+2. Import the project into your favorite editor (thats Visual Studio Code for us!)
+3. [TODO] Set y
+
 ## Contributing
 
 If you are interested in fixing issues and contributing directly to the code base,
@@ -28,6 +34,11 @@ Please also see our [Code of Conduct](CODE_OF_CONDUCT.md).
 ## Bundled Extensions
 
 The code ships with a set of recommended Visual Studio Code extensions that will empower the developement process of your Flask + React web application. These extensions include rich language support (code completion, go to definition) for both Python and JavaScript, as well as quick deploy to Azure from within VS Code. When the project is imported into VS Code, a notifcation will appear giving you the option to install these extensions. 
+
+List of bundled extensions:
+
+* Python Extension for Visual Studio Code
+* Azure App Service Extension
 
 ## License
 
