@@ -1,35 +1,47 @@
 # Flask + React + Postgres Starter 
 
-Code based on https://github.com/dternyak/React-Redux-Flask
+This is a minimal sample Flask and React starter code that demonstrates how both frameworks can be used together in a single page web Application.
 
-This is starter code.
+The code is based on https://github.com/dternyak/React-Redux-Flask.
 
-## Running The Code
+## Running The Code Locally
 
 1. Clone the reponsitory
-2. Import the project into your favorite editor (thats Visual Studio Code for us!)
-3. [TODO] Set y
+```bash
+git clone [TODO INSERT URL]
+```
+2. Import the project folder into your favorite editor (thats Visual Studio Code for us!)
+3. Link your PostgreSQL server by adding the environment variable ```DATABASE_URL``` to your system
+  * For Linux based systems: ```export DATABASE_URL=[YOUR URL HERE]```
+  * For Windows based systems: ```SET DATABASE_URL=[YOUR URL HERE]```
+4. Build the react.js front-end.
+```bash
+npm run build
+```
+5. Create the SQL database
+```bash
+python manage.py create_db
+```
+6. Start the Flask back-end server
+```bash
+python manage.py runserver
+```
+7. Check ```localhost:5000``` in your browser to view the web application.
 
-## Contributing
+## Deploying The Code
 
-If you are interested in fixing issues and contributing directly to the code base,
-please see the document [How to Contribute](https://github.com/Microsoft/vscode/wiki/How-to-Contribute), which covers the following:
+1. [TODO] setting global environment variables in your system
 
-* [How to build and run from source](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#build-and-run)
-* [The development workflow, including debugging and running tests](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#debugging)
-* [Coding Guidelines](https://github.com/Microsoft/vscode/wiki/Coding-Guidelines)
-* [Submitting pull requests](https://github.com/Microsoft/vscode/wiki/How-to-Contribute#pull-requests)
-* [Contributing to translations](https://aka.ms/vscodeloc)
 
-Please also see our [Code of Conduct](CODE_OF_CONDUCT.md).
+# Contributing
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Feedback
 
-* Ask a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/vscode).
 * Request a new feature on [GitHub](CONTRIBUTING.md).
-* Vote for [Popular Feature Requests](https://github.com/Microsoft/vscode/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc).
-* File a bug in [GitHub Issues](https://github.com/Microsoft/vscode/issues).
-* [Tweet](https://twitter.com/code) us with any other feedback.
+* File a bug in [GitHub Issues](https://) [TODO FIX LINK].
+* [Tweet](https://twitter.com/microsoft) us with any other feedback.
 
 ## Bundled Extensions
 
@@ -37,8 +49,8 @@ The code ships with a set of recommended Visual Studio Code extensions that will
 
 List of bundled extensions:
 
-* Python Extension for Visual Studio Code
-* Azure App Service Extension
+* [Python Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+* [Azure App Service Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice)
 
 ## License
 
