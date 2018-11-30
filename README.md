@@ -4,6 +4,7 @@ This is a minimal sample Flask and React starter code that demonstrates how both
 
 The code is based on https://github.com/dternyak/React-Redux-Flask.
 
+## Tutorial
 ## Running The Code Locally
 
 1. Clone the reponsitory
