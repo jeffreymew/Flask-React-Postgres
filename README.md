@@ -5,33 +5,36 @@ This is a minimal sample Flask and React starter code that demonstrates how both
 The code is based on https://github.com/dternyak/React-Redux-Flask.
 
 ## Tutorial
-## Running The Code Locally
+
+## Setting Up The Project
 
 1. Clone the reponsitory
 ```bash
 git clone [TODO INSERT URL]
 ```
 2. Import the project folder into your favorite editor (thats Visual Studio Code for us!)
-3. Link your PostgreSQL server by adding the environment variable ```DATABASE_URL``` to your system
-  * For Linux based systems: ```export DATABASE_URL=[YOUR URL HERE]```
-  * For Windows based systems: ```SET DATABASE_URL=[YOUR URL HERE]```
-4. Build the react.js front-end.
+
+## Importing into VS Code
+
+3. Build the react.js front-end.
 ```bash
 npm run build
 ```
-5. Create the SQL database
+4. Create the PostgreSQL database
 ```bash
 python manage.py create_db
 ```
-6. Start the Flask back-end server
+5. Start the Flask back-end server
 ```bash
 python manage.py runserver
 ```
-7. Check ```localhost:5000``` in your browser to view the web application.
+6. Check ```localhost:5000``` in your browser to view the web application.
 
-## Deploying The Code
+## Deploying The Code To Azure
 
-1. [TODO] setting global environment variables in your system
+1. Go to the extensions tab on VS Code
+
+2. Install the recommended extensions that show up 
 
 
 # Contributing
