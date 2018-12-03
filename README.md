@@ -11,8 +11,24 @@ The code is based on https://github.com/dternyak/React-Redux-Flask.
 1. Clone the reponsitory
 ```bash
 git clone [TODO INSERT URL]
+cd flask-react-postgres
 ```
-2. Import the project folder into your favorite editor (thats Visual Studio Code for us!)
+
+2. Create and activate a virtual environment
+```bash
+python -m venv [VIRTUAL_ENVIRONMENT_NAME]
+activate env
+```
+
+3. Install requirements.txt
+```bash
+pip install -r requirements.txt
+```
+
+4. Import the project folder into VS Code
+```bash
+code .
+```
 
 ## Importing into VS Code
 
