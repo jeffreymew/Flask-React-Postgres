@@ -34,6 +34,7 @@ code .
 
 1. Build the react.js front-end.
 ```bash
+npm install
 npm run build
 ```
 2. Create the PostgreSQL database
