@@ -6,7 +6,7 @@ The code is based on https://github.com/dternyak/React-Redux-Flask.
 
 ## Tutorial
 
-## Setting Up The Project
+## 1. Setting Up The Project
 
 1. Clone the reponsitory
 ```bash
@@ -30,27 +30,35 @@ pip install -r requirements.txt
 code .
 ```
 
-## Importing into VS Code
+## 2. Running The Code Locally
 
-3. Build the react.js front-end.
+1. Build the react.js front-end.
 ```bash
 npm run build
 ```
-4. Create the PostgreSQL database
+2. Create the PostgreSQL database
 ```bash
 python manage.py create_db
 ```
-5. Start the Flask back-end server
+3. Start the Flask server
 ```bash
 python manage.py runserver
 ```
-6. Check ```localhost:5000``` in your browser to view the web application.
+4. Check ```localhost:5000``` in your browser to view the web application.
 
-## Deploying The Code To Azure
+## 3. Deploying The Code To Azure
 
 1. Go to the extensions tab on VS Code
 
 2. Install the recommended extensions that show up 
+
+3. Access Azure through (1) Guest Mode, (2) Creating a free Azure account or (3) signing into Azure with an existing account
+
+4. Create an App Service instance
+
+5. Create a PostgreSQL database with Azure Database for Postgres and connect it to the App Service instance
+
+6. Deploy the code to your newly created App Service instance
 
 
 # Contributing
