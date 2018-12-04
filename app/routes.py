@@ -64,20 +64,55 @@ def is_token_valid():
 
 
 @app.route("/api/submit_task", methods=["POST"])
+@requires_auth
 def submit_task():
     incoming = request.get_json()
 
-    success = Task.add_task(incoming)
-    if not success:
-        return jsonify(message="Error submitting task"), 409
+    success, id = Task.add_task(
+        incoming.get("task"),
+        incoming.get("user_id"),
+        incoming.get("status")
+    )
 
-    return jsonify(success=True)
+    if not success:
+        return jsonify(message="Error submitting task", id=None), 409
+
+    return jsonify(success=True, id=id)
+
 
 
 @app.route("/api/get_tasks_for_user", methods=["POST"])
+@requires_auth
 def get_tasks_for_user():
     incoming = request.get_json()
 
     return jsonify(
         tasks=[i.serialize for i in Task.get_tasks_for_user(incoming["user_id"]).all()]
     )
+
+@app.route("/api/delete_task", methods=["POST"])
+@requires_auth
+def delete_task():
+    incoming = request.get_json()
+
+    success = Task.delete_task(incoming.get('task_id'))
+    if not success:
+        return jsonify(message="Error deleting task"), 409
+
+    return jsonify(success=True)
+
+
+@app.route("/api/edit_task", methods=["POST"])
+@requires_auth
+def edit_task():
+    incoming = request.get_json()
+   
+    success = Task.edit_task(
+        incoming.get('task_id'),
+        incoming.get('task'),
+        incoming.get('status')
+    )
+    if not success:
+        return jsonify(message="Error editing task"), 409
+
+    return jsonify(success=True)

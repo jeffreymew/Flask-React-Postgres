@@ -18,4 +18,5 @@ def create_db():
 
 
 if __name__ == '__main__':
+    # manager.add_option("--dev", required=False, defaut=config.)
     manager.run()

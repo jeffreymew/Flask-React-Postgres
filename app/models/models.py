@@ -69,48 +69,72 @@ class Task(db.Model):
         self.status = status
 
     @staticmethod
-    def add_task(incoming):
+    def add_task(task, user_id, status):
         task = Task(
-            task=incoming["task"],
-            user_id=incoming["user_id"],
-            status=incoming["status"]
+            task=task,
+            user_id=user_id,
+            status=status
         )
-
+        
+        db.session.add(task)
         try:
-            db.session.add(task)
             db.session.commit()
-            return True
+            return True, task.id
         except IntegrityError:
-            return False
+            return False, None
     
     @staticmethod
     def get_latest_tasks():
         user_to_task = {}
 
         result = db.engine.execute(
-            """SELECT date, task, t.user_id, status, u.first_name, u.last_name
+            """SELECT t.id, t.date, t.task, t.user_id, t.status, u.first_name, u.last_name
                 from task t 
-                INNER JOIN (SELECT user_id, max(date) as MaxDate from task group by user_id) tm 
-                    on t.user_id = tm.user_id and t.date = tm.MaxDate 
                 INNER JOIN "user" u 
                     on t.user_id = u.email""") # join with users table
+                    #     INNER JOIN (SELECT user_id, max(date) as MaxDate from task group by user_id) tm 
+                    # on t.user_id = tm.user_id and t.date = tm.MaxDate 
                     
         for t in result:
             if t.user_id in user_to_task:
                 user_to_task.get(t.user_id).append(dict(t))
             else:
                 user_to_task[t.user_id] = [dict(t)]
-       
+
         return user_to_task
 
     @staticmethod
     def get_tasks_for_user(user_id):
         return Task.query.filter_by(user_id=user_id)
 
+    @staticmethod
+    def delete_task(task_id):
+        task_to_delete = Task.query.filter_by(id=task_id).first()
+        db.session.delete(task_to_delete)
+
+        try:
+            db.session.commit()
+            return True
+        except IntegrityError:
+            return False
+    
+    @staticmethod
+    def edit_task(task_id, task, status):
+        task_to_edit = Task.query.filter_by(id=task_id).first()
+        task_to_edit.task = task
+        task_to_edit.status = status
+
+        try:
+            db.session.commit()
+            return True
+        except IntegrityError:
+            return False
+
     @property
     def serialize(self):
        """Return object data in easily serializeable format"""
        return {
+           'id'         : self.id,
            'date'       : self.date.strftime("%Y-%m-%d"),
            'task'       : self.task,
            'user_id'    : self.user_id,
