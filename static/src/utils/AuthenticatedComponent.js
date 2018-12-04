@@ -38,7 +38,7 @@ export function requireAuthentication(Component) {
           history.push("/");
         } else {
           axios
-            .post("http://localhost:5000/api/is_token_valid", {
+            .post("/api/is_token_valid", {
               token
             })
             .then(res => {

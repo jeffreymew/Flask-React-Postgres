@@ -92,8 +92,6 @@ class Task(db.Model):
                 from task t 
                 INNER JOIN "user" u 
                     on t.user_id = u.email""") # join with users table
-                    #     INNER JOIN (SELECT user_id, max(date) as MaxDate from task group by user_id) tm 
-                    # on t.user_id = tm.user_id and t.date = tm.MaxDate 
                     
         for t in result:
             if t.user_id in user_to_task:

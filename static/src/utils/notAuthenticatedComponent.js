@@ -42,7 +42,7 @@ export function requireNoAuthentication(Component) {
         const token = localStorage.getItem("token");
         if (token) {
           axios
-            .post("http://127.0.0.1:5000/api/is_token_valid", {
+            .post("/api/is_token_valid", {
               token
             })
             .then(res => {

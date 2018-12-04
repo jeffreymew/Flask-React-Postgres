@@ -27,7 +27,6 @@ export default class LoginView extends React.Component {
       redirectTo: redirectRoute,
       disabled: true
     };
-    console.log(this.props);
   }
 
   isDisabled() {
@@ -137,7 +136,7 @@ export default class LoginView extends React.Component {
             </div>
           </form>
 
-          <a href="" onClick={(e) => history.push('/register')}>Don't have an account? Register Here!</a>
+          <a href="#" onClick={(e) => history.push('/register')}>Don't have an account? Register Here!</a>
         </Paper>
       </div>
     );

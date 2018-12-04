@@ -44,7 +44,6 @@ class UserCard extends React.Component {
     task.id = id;
     this.state.tasks.push(task);
     this.updateTasks();
-    console.log("updated tasks");
   }
 
   addTask(task_val, status) {
@@ -53,7 +52,6 @@ class UserCard extends React.Component {
   }
 
   deleteTask(task) {
-    console.log(task.id);
     this.props.deleteTask(this.props.token, task.id);
 
     const currentIndex = this.state.tasks.indexOf(task);

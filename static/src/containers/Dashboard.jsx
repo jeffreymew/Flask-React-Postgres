@@ -4,7 +4,6 @@ import * as actionCreators from "../actions/data.jsx";
 import Dashboard from "../layouts/Dashboard/Dashboard.jsx";
 
 function mapStateToProps(state) {
-  // console.log(state.auth.userName);
   return {
     data: state.data,
     token: state.auth.token,

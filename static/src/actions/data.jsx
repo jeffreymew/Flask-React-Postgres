@@ -81,7 +81,6 @@ export function storeTask(token, email, task, updateTaskIdCallback) { //Pass a f
     store_task(token, email, task.task, task.status)
       .then(parseJSON)
       .then(response => {
-        console.log(response.id);
         updateTaskIdCallback(task, response.id);
       })
       .catch(error => {

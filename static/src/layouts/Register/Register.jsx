@@ -43,7 +43,6 @@ class RegisterPage extends React.Component {
       redirectTo: redirectRoute,
       disabled: true
     };
-    console.log(this.props);
   }
 
   isDisabled() {

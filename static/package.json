@@ -1,9 +1,9 @@
 {
   "name": "vs-code-standup",
-  "version": "1.5.0",
+  "version": "1.0.0",
   "description": "VS Code Standup",
   "private": false,
-  "main": "dist/index.js",
+  "main": "static/dist/index.js",
   "dependencies": {
     "@material-ui/core": "3.1.0",
     "@material-ui/icons": "3.0.1",
@@ -32,12 +32,11 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "start": "cd static && react-scripts start",
-    "build": "cd static && react-scripts build",
-    "test": "cd static && react-scripts test --env=jsdom",
-    "eject": "cd static && react-scripts eject",
-    "install": "cd static && npm install",
-    "install:clean": "cd static && rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "build-package": "babel src --out-dir dist"
   },
   "optionalDependencies": {
