@@ -14,18 +14,12 @@ git clone [TODO INSERT URL]
 cd flask-react-postgres
 ```
 
-2. Create and activate a virtual environment
-```bash
-python -m venv [VIRTUAL_ENVIRONMENT_NAME]
-activate env
-```
-
-3. Install requirements.txt
+2. Install requirements.txt
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Import the project folder into VS Code
+3. Import the project folder into VS Code
 ```bash
 code .
 ```
