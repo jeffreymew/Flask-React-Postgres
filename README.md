@@ -15,6 +15,7 @@ cd flask-react-postgres
 ```
 
 2. Create and activate a virtual environment
+
 In Bash
 ```bash
 python3 -m venv venv
