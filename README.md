@@ -10,14 +10,21 @@ The code is based on https://github.com/dternyak/React-Redux-Flask.
 
 1. Clone the reponsitory
 ```bash
-git clone [TODO INSERT URL]
+git clone https://github.com/jeffreymew/Flask-React-Postgres.git
 cd flask-react-postgres
 ```
 
 2. Create and activate a virtual environment
+In Bash
 ```bash
-python -m venv [VIRTUAL_ENVIRONMENT_NAME]
-activate env
+python3 -m venv venv
+source venv/bin/activate
+```
+
+In Powershell
+```Powershell
+py -3 -m venv env
+env\scripts\activate
 ```
 
 3. Install requirements.txt
@@ -34,11 +41,13 @@ code .
 
 1. Build the react.js front-end.
 ```bash
+cd static
 npm install
 npm run build
 ```
 2. Create the PostgreSQL database
 ```bash
+cd ..
 python manage.py create_db
 ```
 3. Start the Flask server
@@ -51,35 +60,23 @@ python manage.py runserver
 
 1. Go to the extensions tab on VS Code
 
-2. Install the recommended extensions that show up 
+2. Install the recommended extensions that show up (App Service Extension, Python Extension)
 
-3. Access Azure through (1) Guest Mode, (2) Creating a free Azure account or (3) signing into Azure with an existing account
+3. Reload the window and navigate to the Azure tab on the left
 
-4. Create an App Service instance
+4. Access Azure services through (1) Guest Mode, (2) Creating a free Azure account or (3) signing into Azure with an existing account
 
-5. Create a PostgreSQL database with Azure Database for Postgres and connect it to the App Service instance
+5. Create an App Service instance with the parameters of a linux system with a Python runtime
 
-6. Deploy the code to your newly created App Service instance
+6. Create a PostgreSQL database with Azure Database for Postgres and connect it to the App Service instance
 
+7. Navigate to the Azure portal for the Azure Database for Postgres instance and allow incoming connections to the instance for everyone 
 
-# Contributing
+8. Navigate to the Azure portal for the App service instance that was just created, and under the "Application Settings" tab and uneder the "Runtime" section, set the "startup file" parameter to be "startup.txt"
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+9. Again under the "Application Settings" tab and under the "Application Settings" section, add a new environment variable for the Postgres 
 
-## Feedback
-
-* Request a new feature on [GitHub](CONTRIBUTING.md).
-* File a bug in [GitHub Issues](https://) [TODO FIX LINK].
-* [Tweet](https://twitter.com/microsoft) us with any other feedback.
-
-## Bundled Extensions
-
-The code ships with a set of recommended Visual Studio Code extensions that will empower the developement process of your Flask + React web application. These extensions include rich language support (code completion, go to definition) for both Python and JavaScript, as well as quick deploy to Azure from within VS Code. When the project is imported into VS Code, a notifcation will appear giving you the option to install these extensions. 
-
-List of bundled extensions:
-
-* [Python Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-* [Azure App Service Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice)
+10. Deploy the code to your newly created App Service instance
 
 ## License
 
