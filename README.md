@@ -2,7 +2,7 @@
 
 This is a minimal sample Flask and React starter code that demonstrates how both frameworks can be used together in a single page web Application.
 
-The code is based on https://github.com/dternyak/React-Redux-Flask.
+The code is based on https://github.com/dternyak/React-Redux-Flask and https://github.com/creativetimofficial/material-dashboard-react
 
 ## Tutorial
 
