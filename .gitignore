@@ -12,6 +12,7 @@ node_modules/
 
 # npmjs
 dist/
+build/
 
 # misc
 .DS_Store
