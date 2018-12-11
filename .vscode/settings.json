@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\t-jemew\\AppData\\Local\\conda\\conda\\envs\\web\\python.exe"
+    "python.pythonPath": "C:\\Users\\t-jemew\\AppData\\Local\\conda\\conda\\envs\\web\\python.exe",
+    "appService.defaultWebAppToDeploy": "/subscriptions/597966d1-829f-417e-9950-8189061ec09c/resourceGroups/appsvc_rg_linux_centralus/providers/Microsoft.Web/sites/jmewSingleWebApp",
+    "appService.deploySubpath": ""
 }
