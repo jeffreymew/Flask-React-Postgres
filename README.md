@@ -42,7 +42,6 @@ code .
 
 1. Build the react.js front-end.
 ```bash
-cd static
 npm install
 npm run build
 ```

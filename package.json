@@ -1,0 +1,22 @@
+{
+    "name": "static",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "install": "cd static && npm install",
+      "start": "cd static && npm run start",
+      "build": "cd static && npm run build",
+      "test": "cd static && npm run test",
+      "eject": "cd static && npm run eject"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": [
+      ">0.2%",
+      "not dead",
+      "not ie <= 11",
+      "not op_mini all"
+    ]
+  }
+  
